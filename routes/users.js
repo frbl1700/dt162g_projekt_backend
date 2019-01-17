@@ -16,14 +16,12 @@ router.post('/validate', function(req, res, next) {
 
     User.findOne({email: email}).exec().then(result => {
         if (result) {
-            //Hittad. Validera lösen
             if (result.password === password) {
                 return res.status(200).json(result);
             }
         } 
 
         res.status(401).json(401);
-
         console.log(result);
     })
     .catch(err => {

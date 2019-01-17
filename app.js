@@ -13,7 +13,7 @@ var imageRouter = require('./routes/images');
 var mongoose = require('mongoose');
 
 /*  Mongoose (MongoDB) */
-mongoose.connect('mongodb://localhost/img', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/dt162g', { useNewUrlParser: true });
 
 var app = express();
 app.use(cors());
